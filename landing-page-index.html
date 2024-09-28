@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Administrasi Guru</title>
+    <style>
+        /* Reset dan style dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            margin-bottom: 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #005f73;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+       /* Slideshow background untuk hero section */
+        @keyframes slide-background {
+        0% {
+            background-image: url('img/slide1.jpg');
+             }
+        33% {
+            background-image: url('img/slide2.jpg');
+            }
+        66% {
+        background-image: url('img/slide3.jpg');
+            }
+        100% {
+            background-image: url('img/slideutama.jpg');
+            }
+        }
+
+        #hero {
+    position: relative; /* Untuk mengatur overlay */
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide-background 10s infinite; /* Slideshow */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam transparan dengan opacity 50% */
+    z-index: 1; /* Posisi overlay di atas background */
+}
+
+#hero .container {
+    position: relative; /* Untuk menjaga konten di atas overlay */
+    z-index: 2; /* Menempatkan konten di atas overlay transparan */
+}
+
+
+        #hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #0a9396;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+        
+        /* Benefit Section */
+        #benefits {
+            padding: 3rem 0;
+            background: #f4f4f4;
+        }
+        .benefit-item {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .benefit-item img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        /* How It Works Section */
+        #how-it-works {
+            padding: 3rem 0;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .step-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            color: #0a9396;
+        }
+        
+        /* Testimonials */
+        #testimonials {
+            background: #e9ecef;
+            padding: 3rem 0;
+        }
+        .testimonial {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Pricing */
+        #pricing {
+            padding: 3rem 0;
+        }
+        .pricing-plan {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        /* FAQ */
+        #faq {
+            background: #f4f4f4;
+            padding: 3rem 0;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        .faq-question {
+            background: #fff;
+            padding: 1rem;
+            cursor: pointer;
+        }
+        .faq-answer {
+            background: #fff;
+            padding: 1rem;
+            display: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: #005f73;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#benefits">Keuntungan</a></li>
+                <li><a href="#how-it-works">Cara Kerja</a></li>
+                <li><a href="#pricing">Harga</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Selesaikan ATP dan RPP Hanya dalam 10 Menit – Lebih Fokus pada Pengajaran tanpa Hambatan!</h1>
+            <p>Platform otomatisasi administrasi guru yang mempermudah tugas Anda, memperbarui kurikulum secara real-time, dan menghemat waktu.</p>
+            <a href="#" class="cta-button">Coba Gratis Sekarang!</a>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div class="container">
+            <h2>Mengapa Guru Memilih Platform Ini?</h2>
+            <div class="benefit-item">
+                <img src="img/time-to-market.png" alt="Hemat Waktu">
+                <h3>Hemat Waktu</h3>
+                <p>Otomatisasi pembuatan dokumen seperti ATP, RPP, dan perangkat administrasi lainnya.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="img/intergration.png" alt="Terhubung dengan Kurikulum Terbaru">
+                <h3>Terhubung dengan Kurikulum Terbaru</h3>
+                <p>Update real-time sesuai kebijakan pemerintah terbaru.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="img/real-time-tracking.png" alt="Akses Kapan Saja, di Mana Saja">
+                <h3>Akses Kapan Saja, di Mana Saja</h3>
+                <p>Aplikasi berbasis cloud yang bisa diakses dari perangkat apa pun, termasuk ponsel.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2>Bagaimana Cara Kerjanya?</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Daftar atau Login</h3>
+                    <p>Buat akun gratis dalam hitungan menit.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Isi Data Anda</h3>
+                    <p>Masukkan informasi kurikulum dan materi pengajaran.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Dokumen Siap</h3>
+                    <p>ATP, RPP, dan administrasi lainnya langsung otomatis tersedia dan siap digunakan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Apa Kata Guru Tentang Kami?</h2>
+            <div class="testimonial">
+                <p>"Dengan platform ini, saya tidak lagi kewalahan dengan administrasi. Lebih banyak waktu untuk mengajar siswa saya!"</p>
+                <p><strong>- Ibu Ani, Guru SD di Yogyakarta</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2>Pilih Paket yang Sesuai untuk Anda</h2>
+            <div class="pricing-plan">
+                <h3>Paket Gratis</h3>
+                <p>Akses terbatas untuk mencoba fitur dasar.</p>
+                <a href="#" class="cta-button">Coba Gratis</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>Paket Premium</h3>
+                <p>Semua fitur otomatisasi administrasi hanya dengan Rp. 99.000 per bulan.</p>
+                <a href="#" class="cta-button">Mulai Sekarang dengan Diskon 50%!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Pertanyaan yang Sering Ditanyakan</h2>
+            <div class="faq-item">
+                <div class="faq-question">Bagaimana cara kerja platform ini?</div>
+                <div class="faq-answer">Platform kami menggunakan teknologi otomatisasi untuk menghasilkan dokumen administrasi guru berdasarkan input yang Anda berikan. Cukup masukkan informasi dasar, dan sistem kami akan menghasilkan dokumen yang diperlukan.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apakah platform ini sesuai dengan kurikulum terbaru?</div>
+                <div class="faq-answer">Ya, kami selalu memperbarui sistem kami sesuai dengan kurikulum dan kebijakan pendidikan terbaru dari pemerintah.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apakah ada versi mobile?</div>
+                <div class="faq-answer">Ya, platform kami dapat diakses melalui browser di perangkat mobile Anda. Kami juga sedang mengembangkan aplikasi mobile khusus untuk pengalaman yang lebih baik.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="final-cta">
+        <div class="container">
+            <h2>Tingkatkan Produktivitas Anda sebagai Guru Sekarang!</h2>
+            <a href="#" class="cta-button">Coba Gratis Sekarang!</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Platform Administrasi Guru. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Simple script to toggle FAQ answers
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
